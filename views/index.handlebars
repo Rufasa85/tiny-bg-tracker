@@ -1,0 +1,74 @@
+<main>
+    <section>
+        <h2>Games:</h2>
+        {{#each games}}
+        <div class="gameBlock" data-gameId={{id}}>
+            <div class="row">
+                <h3>{{name}}</h3>
+                {{#if lastPlayed}}
+                <h3>Last played: {{lastPlayed}}</h3>
+                {{else}}
+                <h3>Never played!</h3>
+                {{/if}}
+            </div>
+            <div class="row">
+                {{#if hasNotes}}
+                <p>{{numNotes}} note(s)!</p>
+                {{else}}
+                <p>no notes yet!</p>
+                {{/if}}
+                {{#if hasPlays}}
+                <p>{{numPlays}} play(s)!</p>
+                {{else}}
+                <p>no plays yet!</p>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </section>
+    <aside class="hidden">
+        <h1 id="gameTitle">Title here, last played: here</h1>
+        <div id="notesAndPlays">
+            <div id="notes">
+                <form action="" id="newNote">
+                    <input type="hidden" name="gameId">
+                    <textarea name="text" id="" placeholder="new note"></textarea>
+                    <button>save note</button>
+                </form>
+                <div id="notesList">
+
+                </div>
+            </div>
+            <div id="plays">
+                <form action="" id="newPlay">
+                    <input type="hidden" name="gameId">
+                    <label for="">Joe Score</label>
+                    <input type="number" name="joeScore" id="">
+                    <label for="">Arra Score</label>
+                    <input type="number" name="arraScore" id="">
+                    <label for="">date played</label>
+                    <input type="date" name="playedOn" id="">
+                    <button>save play</button>
+                </form>
+                <div id="playsList">
+                    <div class="playCard">
+                        <p> date here, sorted by recent</p>
+                        <h4>Joe score here bold winner</h4>
+                        <h4>Arra score here bold winner</h4>
+                        <div class="playNotes">
+                            <form action="" id="newPlayNote">
+                                <input type="hidden" name="gameId">
+                                <input type="hidden" name="playId">
+                                <textarea name="text" id="" placeholder="new play note"></textarea>
+                                <button>save note on this play</button>
+                            </form>
+                            <div class="playNoteCard">
+                                <p>text from play notes here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</main>

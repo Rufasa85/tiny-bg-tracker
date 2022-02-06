@@ -17,7 +17,10 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
         const games = await Game.findByPk(req.params.id, {
-            include: [Play, Note]
+            include: [ Note, {
+                model:Play,
+                include:[Note]
+            }]
         })
         res.json(games)
     } catch (error) {

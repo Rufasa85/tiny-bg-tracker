@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: cornflowerblue
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+section {
+    width: 35%;
+    max-height: 100vh;
+    overflow: auto;
+    margin: 0 1%
+}
+
+section::-webkit-scrollbar {
+    width: 5px;
+}
+
+aside {
+    width: 65%;
+    min-height: 100vh;
+    margin: 0 1%
+}
+
+.gameBlock {
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+
+.gameBlock:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: seagreen;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 0;
+}
+
+#notesAndPlays {
+    display: flex
+}
+
+#notesAndPlays>* {
+    border: 1px solid black;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.nodisp {
+    display: none;
+}
+
+.winner {
+    color: green;
+}
+
+#notes {
+    width: 30%;
+}
+
+#plays {
+    width: 70%;
+}
+
+input,
+textarea {
+    display: block
+}
+
+.notesCard {
+    background-color: goldenrod;
+    border: 1px solid black;
+    margin: 2%;
+    padding: 2%;
+}
+
+#playsList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#playsList>h4 {
+    width: 100%;
+}
+
+.playCard {
+    background-color: salmon;
+    width: 45%;
+    margin: 2%;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px black;
+}
+
+.playNotesCard {
+    background-color: seagreen;
+    margin: 2%;
+    border: 1px solid black;
+}
